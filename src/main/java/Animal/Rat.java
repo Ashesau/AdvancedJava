@@ -1,21 +1,43 @@
 package Animal;
 
-public class Rat extends Animal { //Rat - дочерний класс родительского класса Animal
+public class Rat extends Animal {
 
+    private String eat;
 
-    @Override
-    public void eat() {
-        System.out.println("Крыса:\n" +
-        "• Яростно грызет семачки");
+    public Rat (String name, String voice, int paws, int tails) {
+        super(name, voice, paws, tails);
+        this.eat = "яыр";
     }
-    @Override
-    public void sleep() {
-        System.out.println("• Шпит");
+    public Rat (String name, String voice, int paws, int tails, String eat) {
+        super(name, voice, paws, tails);
+        this.eat = eat;
     }
-    public void ratSound() {
-        System.out.println("• * крысячий писк *");
+    public String getEat() {
+        return eat;
     }
-    public void ratName() {
-        System.out.println();
+    public void setEat(String eat) {
+        this.eat = eat;
     }
 }
+
+
+
+
+
+
+//    @Override
+//    public void eat() {
+//        System.out.println("Крыса:\n" +
+//        "• Яростно грызет семачки");
+//    }
+//    @Override
+//    public void sleep() {
+//        System.out.println("• Шпит");
+//    }
+//    public void ratSound() {
+//        System.out.println("• * крысячий писк *");
+//    }
+//    public void ratName() {
+//        System.out.println();
+//    }
+
