@@ -1,0 +1,31 @@
+package AdvancedTasks;
+
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class Massif {
+
+    class ArrayIterator<T> implements java.util.Iterator<T> {
+
+        private T[] array;
+        private int index = 0;
+
+        public ArrayIterator(T[] array) {
+            this.array = array;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return index < array.length;
+        }
+
+        @Override
+        public T next() {
+            if (!hasNext())
+                throw new NoSuchElementException();
+            return array[index++];
+        }
+    }
+}
+
+//итератор по массиву
