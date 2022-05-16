@@ -3,9 +3,8 @@ package AdvancedTasks;
 import java.util.HashMap;
 import java.util.Map;
 
-public class StringPermutation {
+    public class StringPermutation {
 
-    public class Main {
         public static boolean equalsString(String w1, String w2) {
             return stringToMap(w1).equals(stringToMap(w2));
         }
@@ -28,4 +27,3 @@ public class StringPermutation {
             System.out.println(equalsString("hello", "art"));
         }
     }
-}

@@ -37,46 +37,6 @@ public class Students {
 
     }
 
-    private static void testFindFirstSkipCount() {
-        Collection<String> collection = Arrays.asList("a1", "a2", "a3", "a1");
-
-        System.out.println("Test findFirst and skip start");
-
-        String first = collection.stream().findFirst().orElse("1");
-        System.out.println("Вернуть первый элемент = " + first);
-
-        String last = collection.stream().skip(collection.size() - 1).findAny().orElse("1");
-        System.out.println("Вернуть последний элемент = " + last );
-
-        String find = collection.stream().filter("a3"::equals).findFirst().get();
-        System.out.println("Найден элемент = " + find);
-
-        String third = collection.stream().skip(2).findFirst().get();
-        System.out.println("Вернуть третий элемент = " + third);
-
-        System.out.println();
-        System.out.println("Начать тест");
-
-        List<String> select = collection.stream().filter((s) -> s.contains("1")).collect(Collectors.toList());
-        System.out.println("Выбор элементов = " + select);
-    }
-
-    private static void testLimit() {
-        System.out.println();
-        System.out.println("Test limit start");
-        Collection<String> collection = Arrays.asList("a1", "a2", "a3", "a1");
-
-        List<String> limit = collection.stream().limit(2).collect(Collectors.toList());
-        System.out.println("limit = " + limit);
-
-
-        List<String> fromTo = collection.stream().skip(1).limit(2).collect(Collectors.toList());
-        System.out.println("fromTo = " + fromTo);
-
-        String last = collection.stream().skip(collection.size() - 1).findAny().orElse("1");
-        System.out.println("last = " + last );
-    }
-
     private enum Sex {
         MAN,
         WOMEN
