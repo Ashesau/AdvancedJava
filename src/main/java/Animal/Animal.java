@@ -1,10 +1,40 @@
 package Animal;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
 public class Animal {
 
-    String name = "• Жирная мыш\n"; //поле
-    String name2 = "• Живоглот\n";
-    String name3 = "• Зло во плоти";
+
+    private String name;
+    private String sound;
+    private int paws;
+    private int tails;
+
+    public Animal(String name, int paws, int tails){
+        this.name = name;
+        this.sound = sound;
+        this.paws = paws;
+        this.tails = tails;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSound() {
+        return sound;
+    }
+
+    public int getPaws() {
+        return paws;
+    }
+
+    public int getTails() {
+        return tails;
+    }
 
     public void eat() {
         System.out.println("Ем вкусняшки"); //даем какому-то животному метод

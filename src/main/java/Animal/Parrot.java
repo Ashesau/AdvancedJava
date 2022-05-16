@@ -15,6 +15,6 @@ public class Parrot extends Animal {
         System.out.println("• * кви-кви *");
     }
     public void parrotName() {
-        System.out.println(name3);
+        System.out.println();
     }
 }

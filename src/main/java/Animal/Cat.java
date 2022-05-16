@@ -15,6 +15,6 @@ public class Cat extends Animal {
         System.out.println("• * требовательный мяу *");
     }
     public void catName() {
-        System.out.println(name2);
+        System.out.println();
     }
 }

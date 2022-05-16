@@ -2,6 +2,7 @@ package Animal;
 
 public class Rat extends Animal { //Rat - дочерний класс родительского класса Animal
 
+
     @Override
     public void eat() {
         System.out.println("Крыса:\n" +
@@ -15,6 +16,6 @@ public class Rat extends Animal { //Rat - дочерний класс родит
         System.out.println("• * крысячий писк *");
     }
     public void ratName() {
-        System.out.println(name);
+        System.out.println();
     }
 }
