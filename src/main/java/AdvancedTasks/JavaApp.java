@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class JavaApp {
 
-    //Провалидировать строку на закрывающиеся скобки
+    // валидация строки на закрывающиеся скобки
 
     public static void main(String[] args) {
 

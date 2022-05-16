@@ -1,11 +1,10 @@
 package AdvancedTasks;
 
 public class AmtNum {
-
-    /* Подсчитываем число '2' между 0 и n */
+    /* Подсчёт числа '2' между 0 и n */
     int numberOf2sInRange(int n) {
         int count = 0;
-        for (int i = 2; i <= n; i++) { // Можем начать с 2
+        for (int i = 2; i <= n; i++) {
             count += numberOf2s(i);
         }
         return count;

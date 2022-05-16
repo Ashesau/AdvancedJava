@@ -31,9 +31,9 @@ public class RepeatingChar {                //Найти первый наибо
 //        char last = str.charAt(0);
 //        int count = 1;
 //        for (int i = 1; i < str.length(); i++) {
-//            if (str.charAt(i) == last) { // Находим повторяющийся символ
+//            if (str.charAt(i) == last) {
 //                count++;
-//            } else {  // Вставляем счетчик символа и обновляем последний символ
+//            } else {
 //                myStr += last + count;
 //                last = str.charAt(i);
 //                count = 1;
@@ -43,7 +43,7 @@ public class RepeatingChar {                //Найти первый наибо
 //    }
 
 //    String compressAlternate(String str) {
-//        /* Проверяем, вдруг сжатие создаст более длинную строку */
+//
 //        int size = countCompression(str);
 //        if (size >= str.length()) {
 //            return str;
@@ -54,17 +54,17 @@ public class RepeatingChar {                //Найти первый наибо
 //        char last = str.charAt(0);
 //        int count = 1;
 //        for (int i = 1; i < str.length(); i++) {
-//            if (str.charAt(i) == last) { // Найдите повторяющийся символ
+//            if (str.charAt(i) == last) {
 //                count++;
 //            }  else {
-//                /* Обоновляем счетчик повторяющихся символов */
+//
 //                index = setChar(str, array, last, index, count);
 //                last = str.charAt(i);
 //                count = 1;
 //            }
 //        }
 //
-//        /* Обновляем строку с последним набором повторяющихся символов */
+//
 //        index = setChar(str, array, last, index, count);
 //        return String.valueOf(array);
 //    }
@@ -74,10 +74,10 @@ public class RepeatingChar {                //Найти первый наибо
 //        array[index] = c;
 //        index++;
 //
-//        /* Конвертируем счетчик в строку */
+//
 //        char[] cnt = String. valueOf (count) .toCharArray();
 //
-//        /* Копируем символы от большего разряда к меньшему */
+//
 //        for (char х : cnt) {
 //            array[index] = х;
 //            index++;
@@ -86,6 +86,6 @@ public class RepeatingChar {                //Найти первый наибо
 //    }
 //
 //    int countCompression(String str) {
-//        /* так же, как и раньше  */
+//
 //    }
 }
