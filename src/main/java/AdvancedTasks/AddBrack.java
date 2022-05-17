@@ -10,6 +10,7 @@ public class AddBrack {
         Scanner s = new Scanner(System.in);
         String w = s.nextLine();
         String[] str = w.split("");
+        s.close();
 
         int num = str.length / 2;
 
