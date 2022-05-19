@@ -1,30 +1,35 @@
-/* Дан массив целых чисел nums.
-Пара (i,j) называется идентичной, если nums[i] == nums[j] и i < j.
-Необходимо вычислить количество идентичных пар */
+///* Дан массив целых чисел nums.
+//Пара (i,j) называется идентичной, если nums[i] == nums[j] и i < j.
+//Необходимо вычислить количество идентичных пар */
 
 package AdvancedTasks;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Scanner;
 
 public class IdenticalPairs {
 
-    public static int numberOfIdenticalPairs(int[] nums) {
-
-        Map<Integer, Integer> ran = new HashMap<>();
-
-        int pairs = 0;
-        for (int i : nums) {
-            int top = ran.getOrDefault(i, 0);
-            pairs += top;
-            ran.put(i, top + 1);
+    public static void numberOfIdenticalPairs() {
+        int [] nums;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter length array: ");
+        int x = sc.nextInt();
+        nums = new int[x];
+        for(int s = 1; s <= x; s++){
+            System.out.print("Enter : ");
+            nums[s-1] =sc.nextInt();
         }
-        return pairs;
+        int i = 0;
+        int j = 1;
+        int count = 0;
+        for(i = 0; i < nums.length; i++) {
+            for(j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j] && i < j );
+                count++;
+            }
+        }
+        System.out.println(count);
     }
-        public static void main(String[] args) {
-
-        int[] nums = {1,4,3,6,7,8,4,3,9,8,4,5};
-
-            System.out.println(numberOfIdenticalPairs(nums));
-        }
+    public static void main(String[] args) {
+        IdenticalPairs.numberOfIdenticalPairs();
+    }
 }
