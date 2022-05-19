@@ -9,14 +9,14 @@ import java.util.Scanner;
 public class IdenticalPairs {
 
     public static void numberOfIdenticalPairs() {
-        int [] nums;
+        int[] nums;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter length array: ");
+        System.out.print("Введите размер массива:\n");
         int x = sc.nextInt();
         nums = new int[x];
         for(int s = 1; s <= x; s++){
-            System.out.print("Enter : ");
-            nums[s-1] =sc.nextInt();
+            System.out.print("Введите число:\n");
+            nums[s-1] = sc.nextInt();
         }
         int i = 0;
         int j = 1;
