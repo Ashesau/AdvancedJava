@@ -22,11 +22,10 @@ public class PeopleStudents {
 
         /* Найти кол-во потенциальных работяг (т.е. от 18 лет и учитывая что женщины
         выходят в 55 лет, а мужчина в 60 */
-        long peopleHowCanWork = students.stream().filter((p) -> p.getAge() >= 18).filter(
+        List<Students> peopleHowCanWork = students.stream().filter((p) -> p.getAge() >= 18).filter(
                 (p) -> (p.getSex() == Sex.WOMEN && p.getAge() < 55) ||
-                (p.getSex() == Sex.MAN && p.getAge() < 60)).count();
+                (p.getSex() == Sex.MAN && p.getAge() < 60)).collect(Collectors.toList());
         System.out.println("Количество работоспособных людей - " + peopleHowCanWork);
-
     }
 
     private enum Sex {
