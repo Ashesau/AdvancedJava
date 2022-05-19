@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class AddBrack {
+public class AddBrackets {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Впиши любое число или строку:");

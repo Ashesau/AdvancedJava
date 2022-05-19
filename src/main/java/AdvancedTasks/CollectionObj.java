@@ -29,5 +29,3 @@ public class CollectionObj {
         System.out.println(list);
     }
 }
-
-
