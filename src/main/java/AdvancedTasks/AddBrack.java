@@ -1,4 +1,4 @@
-﻿package AdvancedTasks;
+package AdvancedTasks;
 
 import java.util.LinkedList;
 import java.util.List;
