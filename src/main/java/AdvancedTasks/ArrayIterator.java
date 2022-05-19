@@ -1,4 +1,5 @@
 /* Итератор по массиву */
+
 package AdvancedTasks;
 
 public class ArrayIterator {

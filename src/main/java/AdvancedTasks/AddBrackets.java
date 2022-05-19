@@ -2,6 +2,7 @@
 буквы (большие и маленькие). Добавить открывающиеся и закрывающиеся
 скобки по следующему образцу:
 "example" -> "(e(x(a(m)p)l)e)" */
+
 package AdvancedTasks;
 
 import java.util.LinkedList;

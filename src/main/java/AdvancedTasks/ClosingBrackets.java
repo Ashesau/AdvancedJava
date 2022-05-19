@@ -1,4 +1,5 @@
 /* валидация строки на закрывающиеся скобки */
+
 package AdvancedTasks;
 
 import java.util.Scanner;
