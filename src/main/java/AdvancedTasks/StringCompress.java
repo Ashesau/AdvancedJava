@@ -1,10 +1,13 @@
-/* Реализовать метод сжатия строки на основе
+/**
+ *  Реализовать метод сжатия строки на основе
 счетчика повторяющихся символов.
 Например, строка "aabcccccaaa" должна превратиться в "а2b1с5аЗ".
 Если «сжатая» строка оказывается длиннее исходной, метод должен
 вернуть исходную строку */
 
 package AdvancedTasks;
+
+import java.util.Scanner;
 
 public class StringCompress {
 
@@ -49,7 +52,10 @@ public class StringCompress {
     }
 
     public static void main(String[] args) {
-        String str = "qqqqqwwwwwwee";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Напишите какую-нибудь кракозябру:");
+
+        String str = scanner.nextLine();
         System.out.println(compress(str));
     }
 }

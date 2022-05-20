@@ -1,4 +1,3 @@
-/* Девятихвостый демон-лис из японской мифологии */
 package Polymorphism;
 
 public class Kitsune extends Animal{

@@ -1,4 +1,5 @@
-/* Дана коллекция класс Students (с полями name — имя, age — возраст, sex — пол),
+/**
+ *  Дана коллекция класс Students (с полями name — имя, age — возраст, sex — пол),
 вида List.of( new Students(«Вася», 16, Sex.MAN), new Students(«Петя», 23, Sex.MAN),
 new Students(«Елена», 42, Sex.WOMEN), new Students(«Иван Иванович», 69, Sex.MAN)).
 a. Выбрать кому придет повестка (от 18 до 27 лет)
@@ -6,6 +7,8 @@ b. Найти кол-во потенциальных работяг (т.е. от
 выходят в 55 лет, а мужчина в 60) */
 
 package StreamTasks;
+
+import lombok.Getter;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -23,17 +26,14 @@ public class PeopleStudents {
                 new Students("Иван Иванович", 69, Sex.MAN)
         );
 
-        // Выбрать кому придет повестка (от 18 до 27 лет)
         List<Students> militaryService = students.stream().filter((p)-> p.getAge() >= 18 && p.getAge() < 27
-                && p.getSex() == Sex.MAN).collect(Collectors.toList());
-        System.out.println("Военнообязанные - " + militaryService);
+                && p.getSex() == Sex.MAN).toList();
+        System.out.println("Повестка придет: " + militaryService);
 
-        /* Найти кол-во потенциальных работяг (т.е. от 18 лет и учитывая что женщины
-        выходят в 55 лет, а мужчина в 60 */
         List<Students> peopleHowCanWork = students.stream().filter((p) -> p.getAge() >= 18).filter(
                 (p) -> (p.getSex() == Sex.WOMEN && p.getAge() < 55) ||
-                (p.getSex() == Sex.MAN && p.getAge() < 60)).collect(Collectors.toList());
-        System.out.println("Количество работоспособных людей - " + peopleHowCanWork);
+                (p.getSex() == Sex.MAN && p.getAge() < 60)).toList();
+        System.out.println("Количество потенциальных работяг: " + peopleHowCanWork);
     }
 
     private enum Sex {
@@ -75,7 +75,7 @@ public class PeopleStudents {
         }
     }
 
-    public static void main(String[] args)  throws Exception {
+    public static void main(String[] args) throws Exception {
         testFilter();
     }
 }

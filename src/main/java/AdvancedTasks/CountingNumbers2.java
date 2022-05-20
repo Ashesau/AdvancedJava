@@ -1,4 +1,5 @@
-/* Написать метод, который будет подсчитывать
+/**
+ *  Написать метод, который будет подсчитывать
 количество цифр «2», используемых в десятичной
 записи целых чисел от 0 до n (включительно) */
 
@@ -11,7 +12,7 @@ public class CountingNumbers2 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите число:\n");
+        System.out.println("Введите число:");
         long count = scan.nextLong();
         String str = Long.toString(count);
         String[] s = str.split("");

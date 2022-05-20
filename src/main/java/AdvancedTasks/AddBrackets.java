@@ -1,4 +1,5 @@
-/* Дана строка, содержащая только английские
+/**
+ Дана строка, содержащая только английские
 буквы (большие и маленькие). Добавить открывающиеся и закрывающиеся
 скобки по следующему образцу:
 "example" -> "(e(x(a(m)p)l)e)" */
@@ -37,10 +38,10 @@ public class AddBrackets {
         String word2 = String.join("", list2);
 
         if (str.length % 2 == 0) {
-            System.out.println(word + word2 + ")");
+            System.out.println(word + "(" + word2 + ")");
         }
         if (str.length % 2 == 1) {
-            System.out.println(word + "(" + word2 + ")");
+            System.out.println(word + word2 + ")");;
         }
     }
 }

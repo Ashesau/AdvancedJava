@@ -1,4 +1,5 @@
-/* валидация строки на закрывающиеся скобки */
+/**
+ * валидация строки на закрывающиеся скобки */
 
 package AdvancedTasks;
 
@@ -14,7 +15,7 @@ public class ClosingBrackets {
         boolean result = false;
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("Введите символ:\n");
+        System.out.print("Введите свои примитивные скобки(круглые, фигурные, квадратные):\n");
         str = scan.nextLine();
         scan.close();
 
@@ -39,11 +40,9 @@ public class ClosingBrackets {
                 count3--;
             }
         }
-        if((count1 == 0) && (count2 == 0) && (count3 == 0)) {
+        if((count1 == 0) && (count2 == 0) && (count3 == 0))
             result = true;
-            System.out.println("OK");
-        } else result = false;
-        System.out.println("Not OK");
+        else result = false;
+        System.out.println(result);
     }
 }
-
