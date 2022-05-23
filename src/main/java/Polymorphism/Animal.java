@@ -1,10 +1,15 @@
 package Polymorphism;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
+
 public class Animal {
 
     private String voice;
@@ -12,24 +17,23 @@ public class Animal {
     private int paws;
     private int tails;
 
-    public Animal(String voice, String eat, int paws, int tails) {
-        this.voice = voice;
-        this.eat = eat;
-        this.paws = paws;
-        this.tails = tails;
+//    public Animal(String voice, String eat, int paws, int tails) {
+//        this.voice = voice;
+//        this.eat = eat;
+//        this.paws = paws;
+//        this.tails = tails;
     }
 
-    public String getVoice() {
-        return voice;
-    }
-    public String getEat() {
-        return eat;
-    }
-    public int getPaws() {
-        return paws;
-    }
-    public int getTails() {
-        return tails;
-    }
-}
+//    public String getVoice() {
+//        return voice;
+//    }
+//    public String getEat() {
+//        return eat;
+//    }
+//    public int getPaws() {
+//        return paws;
+//    }
+//    public int getTails() {
+//        return tails;
+//    }
 

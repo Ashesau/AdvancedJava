@@ -8,15 +8,14 @@ b. Найти кол-во потенциальных работяг (т.е. от
 
 package StreamTasks;
 
-import lombok.Getter;
+import lombok.*;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
+//import java.util.stream.Collectors;
 
 public class PeopleStudents {
-
     private static void testFilter() {
 
         Collection<Students> students = Arrays.asList (
@@ -41,38 +40,39 @@ public class PeopleStudents {
         WOMEN
     }
 
+    @Value
     private static class Students {
 
         private final String name;
         private final Integer age;
         private final Sex sex;
 
-        public Students (String name, Integer age, Sex sex) {
-
-            this.name = name;
-            this.age = age;
-            this.sex = sex;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public Integer getAge() {
-            return age;
-        }
-
-        public Sex getSex() {
-            return sex;
-        }
-
-        @Override
-        public String toString() {
-            return
-                    "Имя:'" + name + '\'' +
-                    ", Возраст: " + age +
-                    ", Пол: " + sex;
-        }
+//        public Students (String name, Integer age, Sex sex) {
+//
+//            this.name = name;
+//            this.age = age;
+//            this.sex = sex;
+//        }
+//
+//        public String getName() {
+//            return name;
+//        }
+//
+//        public Integer getAge() {
+//            return age;
+//        }
+//
+//        public Sex getSex() {
+//            return sex;
+//        }
+//
+//        @Override
+//        public String toString() {
+//            return
+//                    "Имя:'" + name + '\'' +
+//                    ", Возраст: " + age +
+//                    ", Пол: " + sex;
+//        }
     }
 
     public static void main(String[] args) throws Exception {
