@@ -25,13 +25,25 @@ public class AddBrackets {
         List list2 = new LinkedList();
 
         for (int i = 0; i < str.length; i++) {
-            if (i <= num) {
-                list.add("(");
-                list.add(str[i]);
+            if (str.length % 2 == 1) {
+                if (i <= num) {
+                    list.add("(");
+                    list.add(str[i]);
+                }
+                if (i > num) {
+                    list2.add(")");
+                    list2.add(str[i]);
+                }
             }
-            if (i > num) {
-                list2.add(")");
-                list2.add(str[i]);
+            if (str.length % 2 == 0) {
+                if (i < num) {
+                    list.add("(");
+                    list.add(str[i]);
+                }
+                if (i >= num) {
+                    list2.add(")");
+                    list2.add(str[i]);
+                }
             }
         }
         String word = String.join("", list);
@@ -41,7 +53,7 @@ public class AddBrackets {
             System.out.println(word + "(" + word2 + ")");
         }
         if (str.length % 2 == 1) {
-            System.out.println(word + word2 + ")");;
+            System.out.println(word + word2 + ")");
         }
     }
 }

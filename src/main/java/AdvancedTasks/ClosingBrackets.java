@@ -8,41 +8,45 @@ import java.util.Scanner;
 public class ClosingBrackets {
     public static void main(String[] args) {
 
-        String str;
-        int count1 = 0;
-        int count2 = 0;
-        int count3 = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите скобки (круглые, квадратные, фигурные): ");
+        char[] str = scanner.nextLine().toCharArray();
+        int brack = 0;
+        int brack2 = 0;
+        int brack3 = 0;
+
         boolean result = false;
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Введите свои примитивные скобки(круглые, фигурные, квадратные):\n");
-        str = scan.nextLine();
-        scan.close();
-
-        for(int i = 0; i < str.length(); i++) {
-
-            if(str.charAt(i) == '(') {
-                count1++;
+        for (int i = 0; i < str.length; i++) {
+            if (str[i] == '(') {
+                brack++;
+            } else if (str[i] == ')') {
+                brack--;
             }
-            else if (str.charAt(i) == ')') {
-                count1--;
+            if (brack < 0) {
+                result = true;
             }
-            if(str.charAt(i) == '[') {
-                count2++;
+            if (str[i] == '[') {
+                brack2++;
+            } else if (str[i] == ']') {
+                brack2--;
             }
-            else if (str.charAt(i) == ']') {
-                count2--;
+            if (brack2 < 0) {
+                result = true;
             }
-            if (str.charAt(i) == '{') {
-                count3++;
+            if (str[i] == '{') {
+                brack3++;
+            } else if (str[i] == '}') {
+                brack3--;
             }
-            else if (str.charAt(i) == '}') {
-                count3--;
+            if (brack3 < 0) {
+                result = true;
             }
         }
-        if((count1 == 0) && (count2 == 0) && (count3 == 0))
-            result = true;
-        else result = false;
-        System.out.println(result);
+        if (result || (brack > 0) && result || (brack2 > 0) && result || (brack3 > 0)) {
+            System.out.println("Not OK");
+        } else {
+            System.out.println("OK");
+        }
     }
 }

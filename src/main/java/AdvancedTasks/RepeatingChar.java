@@ -3,10 +3,7 @@
 
 package AdvancedTasks;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class RepeatingChar {
 
@@ -16,7 +13,7 @@ public class RepeatingChar {
         String str = scanner.nextLine();
         String[] s = str.split("");
 
-        Map<String, Integer> h = new HashMap<String, Integer>();
+        Map<String, Integer> h = new LinkedHashMap<String, Integer>();
 
         for (int i = 0; i < s.length; i++) {
             if (h.containsKey(s[i])) {
@@ -38,21 +35,3 @@ public class RepeatingChar {
         System.out.println("Наиболее часто повторяющийся символ " + chr + ", появляется " + maxVal + " раз");
     }
 }
-//        Scanner s = new Scanner(System.in);
-//        String str = s.nextLine();
-//        System.out.println ("Исходный символ: " + str);
-//
-//        Scanner s1 = new Scanner(System.in);
-//        System.out.print ("Введите символ, который хотите найти:\n");
-//        char ch = s1.next (). charAt (0);
-//        s1.close();
-//
-//        int i, sum = 0;
-//        for ( i = 0 ; i < str.length() ; i++) {
-//            if ( str.charAt(i) == ch )
-//                ++ sum;
-//        }
-//        System.out.print ("Наиболее часто повторяющийся символ " + ch +
-//                " появляется в строке " + sum + " раз\n");
-//    }
-//}
